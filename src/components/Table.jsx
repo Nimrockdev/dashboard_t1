@@ -58,6 +58,42 @@ const data = [
     departement: "The Federal Department of Justice and Police (FDJP)",
     status: "inactive",
   },
+  {
+    name: "Karin K",
+    Role: "Federal Councillor",
+    departement: "The Federal Department of Justice and Police (FDJP)",
+    status: "inactive",
+  },
+  {
+    name: "Karin Ke",
+    Role: "Federal Councillor",
+    departement: "The Federal Department of Justice and Police (FDJP)",
+    status: "inactive",
+  },
+  {
+    name: "Karin Kel",
+    Role: "Federal Councillor",
+    departement: "The Federal Department of Justice and Police (FDJP)",
+    status: "inactive",
+  },
+  {
+    name: "Karin Kell",
+    Role: "Federal Councillor",
+    departement: "The Federal Department of Justice and Police (FDJP)",
+    status: "inactive",
+  },
+  {
+    name: "Karin Kelle",
+    Role: "Federal Councillor",
+    departement: "The Federal Department of Justice and Police (FDJP)",
+    status: "inactive",
+  },
+  {
+    name: "Karin Keller",
+    Role: "Federal Councillor",
+    departement: "The Federal Department of Justice and Police (FDJP)",
+    status: "inactive",
+  },
 ];
 
 function TableApp() {
