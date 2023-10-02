@@ -1,24 +1,15 @@
-import { SideBar } from "../../components/SideBar";
-import { NavBar } from "../../components/NavBar";
+import { DashboardLayout } from "../layout/DashboardLayout";
 import { App } from "../../components/Dash";
 
 export const DashboardPage = () => {
   return (
-    <div className="dashboard-container">
-      <NavBar />
-      <div className="main-container">
-        <SideBar />
-        <div className="content-container">
-          <App />
-        </div>
-      </div>
-    </div>
+    <DashboardLayout>
+      <App />
+    </DashboardLayout>
   );
 };
 
-/*
-
-    <div className="dashboard-container">
+/*<div className="dashboard-container">
       <NavBar />
       <div className="main-container">
         <SideBar />
@@ -26,7 +17,4 @@ export const DashboardPage = () => {
           <App />
         </div>
       </div>
-    </div>
-
-
-*/
+    </div>*/

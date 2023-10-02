@@ -1,5 +1,5 @@
-import { SideBar } from "../../components/SideBar";
-import { NavBar } from "../../components/NavBar";
+import { SideBar } from "../components/SideBar";
+import { NavBar } from "../components/NavBar";
 
 export const DashboardConfigPage = () => {
   return (
