@@ -3,6 +3,7 @@ import { DashboardPage } from "../pages/DashboardPage";
 import { DashboardConfigPage } from "../pages/DashboardConfigPage";
 
 export const DashboardRoutes = () => {
+  console.log("jsg DashboardRoutes");
   return (
     <Routes>
       <Route path="/" element={<DashboardPage />} />

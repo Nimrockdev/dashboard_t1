@@ -1,5 +1,6 @@
 import { AppBar, Grid, IconButton, Toolbar, Typography } from "@mui/material";
 import { LogoutOutlined, MenuOutlined } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 export const NavBar = (drawerWidth = 240) => {
   return (
@@ -8,11 +9,13 @@ export const NavBar = (drawerWidth = 240) => {
         <i className="fas fa-calendar-alt"></i>
         &nbsp; Proyecto ...
       </span>
+      <Link to="/auth/login">
+        <button className="btn btn-outline-danger">
+          <i className="fas fa-sign-out-alt"></i>
 
-      <button className="btn btn-outline-danger">
-        <i className="fas fa-sign-out-alt"></i>
-        <span>Salir</span>
-      </button>
+          <span>Salir</span>
+        </button>
+      </Link>
     </div>
   );
 };
