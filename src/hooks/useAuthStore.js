@@ -8,6 +8,9 @@ import { clearErrorMessage, onChecking, onLogin, onLogout } from '../store';
 
 export const useAuthStore = () => {
 
+    //Only test
+    const tokenTest = 'tokentest:2524dsdsds2v5s5x2ss2d62sd6wf4s515sf5sd';
+
     const { status, user, errorMessage } = useSelector(state => state.auth);
     const dispatch = useDispatch();
 
@@ -23,12 +26,13 @@ export const useAuthStore = () => {
     const startLogin = async ({ user, password }) => {
         //dispatch(onCheckingCredentials());
         try {
-            //Aqui hacemos post a algun servicio para comprobar el login
+            //Only test
             if ((user == 'user') && (password == '1234')) {
-                let token = 'tokentest'
-                localStorage.setItem('token', token);
+
+                localStorage.setItem('token', tokenTest);
                 localStorage.setItem('token-init-date', new Date().getTime());
                 dispatch(onLogin({ name: user, uid: user }));
+
             } else {
 
                 dispatch(onLogout('Credenciales incorrectas'));
@@ -48,13 +52,13 @@ export const useAuthStore = () => {
         if (!token) return dispatch(onLogout());
 
         try {
-            /*const { data } = await calendarApi.get('auth/renew');
+            /*
             localStorage.setItem('token', data.token);
             localStorage.setItem('token-init-date', new Date().getTime());*/
 
             //se comprueba la validez del token, usuario...
-            //se comprueba la validez del token, usuario...
-            if (token == 'tokentest') {
+
+            if (token == tokenTest) {
                 dispatch(onLogin({ name: user, uid: user }));
             } else {
 

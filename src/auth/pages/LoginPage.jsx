@@ -57,7 +57,7 @@ export const LoginPage = () => {
             <TextField
               label="Contraseña"
               type="password"
-              placeholder="Contraseña"
+              placeholder="1234"
               fullWidth
               name="password"
               value={password}
