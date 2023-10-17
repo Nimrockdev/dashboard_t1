@@ -12,7 +12,11 @@ import BasicTable from "./MUI/TableC";
 import BasicBars from "./MUI/ChartsC";
 import BasicLineChart from "./MUI/ChartLinesC";
 
+//Chart.js
 import SolarPlantMonitor from "./solarTest/SolarPlantMonitor";
+
+//Kendo
+import KendoDash from "./kendo/Kendo";
 
 import {
   Grid,
@@ -39,7 +43,8 @@ export const App = ({ drawerWidth = 240 }) => {
           <Tab>Tremor 2</Tab>
           <Tab>Tremor 3</Tab>
           <Tab>MUI 1</Tab>
-          <Tab>solarTest</Tab>
+          <Tab>SolarTest</Tab>
+          <Tab>Kendo</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -110,6 +115,11 @@ export const App = ({ drawerWidth = 240 }) => {
               <Grid numItemsMd={2} numItemsLg={2} className="gap-6 mt-6">
                 <SolarPlantMonitor />
               </Grid>
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="mt-6">
+              <KendoDash />
             </div>
           </TabPanel>
         </TabPanels>
