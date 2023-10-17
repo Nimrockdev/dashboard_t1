@@ -12,6 +12,8 @@ import BasicTable from "./MUI/TableC";
 import BasicBars from "./MUI/ChartsC";
 import BasicLineChart from "./MUI/ChartLinesC";
 
+import SolarPlantMonitor from "./solarTest/SolarPlantMonitor";
+
 import {
   Grid,
   Col,
@@ -37,6 +39,7 @@ export const App = ({ drawerWidth = 240 }) => {
           <Tab>Tremor 2</Tab>
           <Tab>Tremor 3</Tab>
           <Tab>MUI 1</Tab>
+          <Tab>solarTest</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -96,8 +99,17 @@ export const App = ({ drawerWidth = 240 }) => {
                 </Card>
               </div>
               <div className="mt-6">
-                <Card></Card>
+                <Card>
+                  <SimpleBadge />
+                </Card>
               </div>
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="mt-6">
+              <Grid numItemsMd={2} numItemsLg={2} className="gap-6 mt-6">
+                <SolarPlantMonitor />
+              </Grid>
             </div>
           </TabPanel>
         </TabPanels>
