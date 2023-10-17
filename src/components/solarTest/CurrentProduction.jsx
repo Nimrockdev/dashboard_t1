@@ -7,7 +7,7 @@ const CurrentProduction = ({ production }) => {
   // Determinar el color y el icono basándose en la producción
   const color = production > 0 ? "green" : "red";
   const icon = production > 0 ? <Brightness5Icon /> : <Brightness2Icon />;
-  const msn;
+  const msn = "";
   return (
     <div style={{ textAlign: "center" }}>
       {icon}
