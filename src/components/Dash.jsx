@@ -18,6 +18,9 @@ import SolarPlantMonitor from "./solarTest/SolarPlantMonitor";
 //Kendo
 import KendoDash from "./kendo/Kendo";
 
+//Custom
+import WD from "./custom/WindMill";
+
 import {
   Grid,
   Col,
@@ -45,6 +48,7 @@ export const App = ({ drawerWidth = 240 }) => {
           <Tab>MUI 1</Tab>
           <Tab>SolarTest</Tab>
           <Tab>Kendo</Tab>
+          <Tab>Molino</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -120,6 +124,11 @@ export const App = ({ drawerWidth = 240 }) => {
           <TabPanel>
             <div className="mt-6">
               <KendoDash />
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="mt-6">
+              <WD />
             </div>
           </TabPanel>
         </TabPanels>
