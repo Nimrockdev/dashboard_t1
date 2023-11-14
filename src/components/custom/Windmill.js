@@ -1,5 +1,6 @@
-import React from "react";
+
 import classNames from "classnames";
+import PropTypes from 'prop-types';
 import "./Windmill.css";
 
 const Windmill = ({ speed }) => {
@@ -11,5 +12,12 @@ const Windmill = ({ speed }) => {
 
     return <div className={windmillClasses}></div>;
 };
+
+Windmill.propTypes = {
+
+    speed: PropTypes.string.isRequired
+
+}
+
 
 export default Windmill;
