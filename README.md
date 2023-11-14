@@ -8,3 +8,9 @@ React APP to test the libraries:
 - Tremor
 - Chart.js
 - Kendo
+- heroicons
+- kendo-react
+- reduxjs
+- animate.css
+- chart.js
+-
