@@ -20,6 +20,7 @@ import KendoDash from "./kendo/Kendo";
 
 //Custom
 import WD from "./custom/WindMill";
+import WD2 from "./custom/WindMill2";
 
 import {
   Grid,
@@ -134,6 +135,17 @@ export const App = ({ drawerWidth = 240 }) => {
                 </Card>
                 <Card>
                   <WD newSpeed={"fast"} torre={"3"} />
+                </Card>
+              </Grid>
+              <Grid numItemsMd={3} numItemsLg={3} className="gap-6 mt-6">
+                <Card>
+                  <WD2 newSpeed={"slow"} torre={"1"} />
+                </Card>
+                <Card>
+                  <WD2 newSpeed={"medium"} torre={"2"} />
+                </Card>
+                <Card>
+                  <WD2 newSpeed={"fast"} torre={"3"} />
                 </Card>
               </Grid>
             </div>

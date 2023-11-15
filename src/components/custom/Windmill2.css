@@ -1,0 +1,18 @@
+.rotateImage {
+  width: 100px;
+  height: 100px;
+
+  animation: rotate 10s infinite linear;
+}
+
+.slow {
+  animation-duration: 10s;
+}
+
+.medium {
+  animation-duration: 5s;
+}
+
+.fast {
+  animation-duration: 1s;
+}
