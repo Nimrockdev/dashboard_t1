@@ -14,9 +14,7 @@ export const authSlice = createSlice({
             state.errorMessage = undefined;
         },
         onLogin: (state, { payload }) => {
-            console.log('jsg login');
-            console.log(state);
-            console.log(payload);
+
             state.status = 'authenticated',
                 state.user = {};
             state.errorMessage = undefined;

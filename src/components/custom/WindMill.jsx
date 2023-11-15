@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import "./Windmill.css";
+import torreImage from "./torre.png";
 
 const Windmill = ({ speed }) => {
   const windmillClasses = classNames("windmill", {
@@ -12,25 +14,37 @@ const Windmill = ({ speed }) => {
   return <div className={windmillClasses}></div>;
 };
 
-function WD() {
-  const [speed, setSpeed] = useState("slow");
+const WD = ({ newSpeed, torre }) => {
+  const [speed, setSpeed] = useState(newSpeed);
 
-  const handleSpeedChange = (newSpeed) => {
-    setSpeed(newSpeed);
+  const handleSpeedChange = (newUserSpeed) => {
+    setSpeed(newUserSpeed);
   };
 
   return (
     <div className="App">
-      <h1>Solar Energy Dashboard</h1>
+      <h1>Solar Energy Dashboard {torre}</h1>
       <br />
       <div className="controls">
         <button onClick={() => handleSpeedChange("slow")}>Slow</button>
         <button onClick={() => handleSpeedChange("medium")}>Medium</button>
         <button onClick={() => handleSpeedChange("fast")}>Fast</button>
       </div>
-      <Windmill speed={speed} />
+      <div className="windmill-container">
+        <img className="testImg" src={torreImage} />
+        <Windmill speed={speed} />
+      </div>
     </div>
   );
-}
+};
+
+WD.propTypes = {
+  newSpeed: PropTypes.string.isRequired,
+  torre: PropTypes.string.isRequired,
+};
+
+Windmill.propTypes = {
+  speed: PropTypes.string.isRequired,
+};
 
 export default WD;

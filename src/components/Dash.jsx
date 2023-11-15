@@ -78,10 +78,7 @@ export const App = ({ drawerWidth = 240 }) => {
           </TabPanel>
           <TabPanel>
             <div className="mt-6">
-              <Card>
-                <Table />
-                <div className="h-96" />
-              </Card>
+              <Card></Card>
             </div>
           </TabPanel>
           <TabPanel>
@@ -128,7 +125,17 @@ export const App = ({ drawerWidth = 240 }) => {
           </TabPanel>
           <TabPanel>
             <div className="mt-6">
-              <WD />
+              <Grid numItemsMd={3} numItemsLg={3} className="gap-6 mt-6">
+                <Card>
+                  <WD newSpeed={"slow"} torre={"1"} />
+                </Card>
+                <Card>
+                  <WD newSpeed={"medium"} torre={"2"} />
+                </Card>
+                <Card>
+                  <WD newSpeed={"fast"} torre={"3"} />
+                </Card>
+              </Grid>
             </div>
           </TabPanel>
         </TabPanels>

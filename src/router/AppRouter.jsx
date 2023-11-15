@@ -18,8 +18,6 @@ export const AppRouter = () => {
   if (status === "checking") {
     return <CheckingAuth />;
   }
-  console.log("jsg status");
-  console.log(status);
 
   return (
     <Routes>
