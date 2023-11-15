@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import "./Windmill2.css";
-import torreImage from "./genetic-data-svgrepo-com.svg";
+import torreImage from "../../../public/molino.svg";
 
 const RotatingImage = ({ speed }) => {
   const rotateImagesClasses = classNames("rotateImage", {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import "./Windmill.css";
-import torreImage from "./torre.png";
+import torreImage from "../../../public/torre.png";
 
 const Windmill = ({ speed }) => {
   const windmillClasses = classNames("windmill", {
