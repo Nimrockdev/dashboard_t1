@@ -49,7 +49,7 @@ export const App = ({ drawerWidth = 240 }) => {
           <Tab>MUI 1</Tab>
           <Tab>SolarTest</Tab>
           <Tab>Kendo</Tab>
-          <Tab>Molino</Tab>
+          <Tab>Wind</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -79,7 +79,9 @@ export const App = ({ drawerWidth = 240 }) => {
           </TabPanel>
           <TabPanel>
             <div className="mt-6">
-              <Card></Card>
+              <Card>
+                <Table />
+              </Card>
             </div>
           </TabPanel>
           <TabPanel>
