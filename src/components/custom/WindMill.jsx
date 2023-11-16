@@ -6,7 +6,7 @@ import "./Windmill.css";
 //import torreImage from "../../../public/torre.png";
 //import torreImage from "/public/torre.png";
 //const torreImage = `${import.meta.env.BASE_URL}torre.png`;
-const torreImage = `/assets/torre.png`;
+const torreImage = `./assets/torre.png`;
 
 const Windmill = ({ speed }) => {
   const windmillClasses = classNames("windmill", {
