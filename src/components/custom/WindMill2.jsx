@@ -1,9 +1,10 @@
 // WD2.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import "./Windmill2.css";
-import torreImage from "../../../public/molino.svg";
+//import torreImage from "../../../public/molino.svg";
+const molino = `/assets/molino.svg`;
 
 const RotatingImage = ({ speed }) => {
   const rotateImagesClasses = classNames("rotateImage", {
@@ -12,7 +13,7 @@ const RotatingImage = ({ speed }) => {
     fast: speed === "fast",
   });
 
-  return <img className={rotateImagesClasses} src={torreImage} alt="Torre" />;
+  return <img className={rotateImagesClasses} src={molino} alt="Molino" />;
 };
 
 const WD2 = ({ newSpeed, torre }) => {
@@ -24,7 +25,7 @@ const WD2 = ({ newSpeed, torre }) => {
 
   return (
     <div className="App">
-      <h1>Solar Energy {torre}</h1>
+      <h1>Wind Energy {torre}</h1>
       <br />
       <div className="controls">
         <button onClick={() => handleSpeedChange("slow")}>Slow</button>

@@ -2,7 +2,8 @@ import { useState } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import "./Windmill.css";
-import torreImage from "../../../public/torre.png";
+//import torreImage from "../../../public/torre.png";
+const torreImage = `/assets/torre.png`;
 
 const Windmill = ({ speed }) => {
   const windmillClasses = classNames("windmill", {
@@ -23,7 +24,7 @@ const WD = ({ newSpeed, torre }) => {
 
   return (
     <div className="App">
-      <h1>Solar Energy Dashboard {torre}</h1>
+      <h1>Wind Energy {torre}</h1>
       <br />
       <div className="controls">
         <button onClick={() => handleSpeedChange("slow")}>Slow</button>
