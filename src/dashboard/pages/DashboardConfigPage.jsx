@@ -1,18 +1,10 @@
-import { SideBar } from "../components/SideBar";
-import { NavBar } from "../components/NavBar";
+import { DashboardLayout } from "../layout/DashboardLayout";
+import { ConfigWidget } from "../../widgets/configWidget/configWidget";
 
 export const DashboardConfigPage = () => {
   return (
-    <div className="dashboard-container">
-      <NavBar />
-      <div className="main-container">
-        <SideBar />
-        <div className="content-container">
-          <main className="p-12">
-            <h1>DashboardConfigPage</h1>
-          </main>
-        </div>
-      </div>
-    </div>
+    <DashboardLayout>
+      <ConfigWidget />
+    </DashboardLayout>
   );
 };

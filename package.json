@@ -39,7 +39,7 @@
     "@progress/kendo-react-treeview": "^6.0.2",
     "@progress/kendo-theme-material": "^7.0.1",
     "@reduxjs/toolkit": "^1.9.6",
-    "@tremor/react": "^3.8.0",
+    "@tremor/react": "^3.11.1",
     "animate.css": "^4.1.1",
     "chart.js": "^4.4.0",
     "classnames": "^2.3.2",
