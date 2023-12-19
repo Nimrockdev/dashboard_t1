@@ -13,4 +13,3 @@ React APP to test the libraries:
 - reduxjs
 - animate.css
 - chart.js
--
