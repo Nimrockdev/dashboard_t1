@@ -22,6 +22,9 @@ import KendoDash from "./kendo/Kendo";
 import WD from "./custom/WindMill";
 import WD2 from "./custom/WindMill2";
 
+//Weather openweathermap
+import CurrentWeather from "./weather/CurrentWeather";
+
 import {
   Grid,
   Col,
@@ -50,6 +53,7 @@ export const App = ({ drawerWidth = 240 }) => {
           <Tab>SolarTest</Tab>
           <Tab>Kendo</Tab>
           <Tab>Wind</Tab>
+          <Tab>Weather</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
@@ -152,8 +156,28 @@ export const App = ({ drawerWidth = 240 }) => {
               </Grid>
             </div>
           </TabPanel>
+          <TabPanel>
+            <Grid numItems={1} numItemsSm={2} numItemsLg={2} className="gap-2">
+              <Col>
+                <Card>
+                  <CurrentWeather lat={"41.30605"} lon={"2.00123"} />
+                </Card>
+              </Col>
+              <Card>
+                <CurrentWeather lat={"61.92411"} lon={"25.748151"} />
+              </Card>
+              <Card>
+                <CurrentWeather lat={"35.05247"} lon={"-118.17396"} />
+              </Card>
+              <Card>
+                <CurrentWeather lat={"-77.846"} lon={"166.676"} />
+              </Card>
+            </Grid>
+          </TabPanel>
         </TabPanels>
       </TabGroup>
     </main>
   );
 };
+
+/* <CurrentWeather lat={"64.72409"} lon={"-18.72934"} />*/
