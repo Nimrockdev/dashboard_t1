@@ -25,7 +25,9 @@ const WD2 = ({ newSpeed, torre }) => {
 
   return (
     <div className="App">
-      <h1>Wind Energy {torre}</h1>
+      <h1>
+        <b>Wind Energy {torre}</b>
+      </h1>
       <br />
       <div className="controls">
         <button onClick={() => handleSpeedChange("slow")}>Slow</button>

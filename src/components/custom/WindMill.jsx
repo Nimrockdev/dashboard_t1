@@ -27,12 +27,14 @@ const WD = ({ newSpeed, torre }) => {
 
   return (
     <div className="App">
-      <h1>Wind Energy {torre}</h1>
+      <h1>
+        <b>Wind Energy {torre}</b>
+      </h1>
       <br />
       <div className="controls">
-        <button onClick={() => handleSpeedChange("slow")}>Slow</button>
-        <button onClick={() => handleSpeedChange("medium")}>Medium</button>
-        <button onClick={() => handleSpeedChange("fast")}>Fast</button>
+        <btn onClick={() => handleSpeedChange("slow")}>Slow</btn>
+        <btn onClick={() => handleSpeedChange("medium")}>Medium</btn>
+        <btn onClick={() => handleSpeedChange("fast")}>Fast</btn>
       </div>
       <div className="windmill-container">
         <img className="testImg" src={torreImage} />

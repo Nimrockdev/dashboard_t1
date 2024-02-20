@@ -5,10 +5,7 @@ const drawerWidth = 220;
 
 export const DashboardLayout = ({ children }) => {
   return (
-    <Box
-      sx={{ display: "flex" }}
-      className="animate__animated animate__fadeIn animate__faster"
-    >
+    <Box sx={{ display: "flex" }} className="">
       <NavBar drawerWidth={drawerWidth} />
       <SideBar drawerWidth={drawerWidth} />
 
