@@ -4,14 +4,11 @@ import { getCurrentWeather } from "../components/weather/services/accions";
 
 export const useWeather = (lat, lon) => {
 
+    const { isLoading, isError, error, data: currentWeather = {}, isFetching, isStale, refetch } = useQuery(
 
-    const { isLoading, isError, error, data: currentWeather = {}, isFetching } = useQuery(
-
-        { queryKey: ['currentWeatherTEST', lat, lon], queryFn: getCurrentWeather(lat, lon), staleTime: 5000 }
+        { queryKey: ['currentWeatherTEST', lat, lon], queryFn: getCurrentWeather(lat, lon), staleTime: 60 * 60 * 1000 /* 60 minutos * 60 segundos * 1000 milisegundos*/ }
 
     );
-
-
 
     return {
         error,
@@ -19,17 +16,7 @@ export const useWeather = (lat, lon) => {
         isFetching,
         isLoading,
         currentWeather,
+        isStale, refetch
     };
+
 }
-
-
-/*
-
-
-     ['currentWeather'],
-        console.log('jsg ejecuto getCurrentWeather'),//() => getCurrentWeather.getCurrentWeather(),
-        {
-            staleTime: 1000 * 60 * 60,
-        }
-
-*/

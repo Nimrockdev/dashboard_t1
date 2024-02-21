@@ -1,12 +1,28 @@
+import React, { useState, useEffect } from "react";
+
 import { Grid, Card } from "@tremor/react";
 
 import { useWeather } from "../../hooks/useWeather";
 
 const CurrentWeather = ({ lat, lon }) => {
-  const { error, isError, isFetching, isLoading, currentWeather } = useWeather(
-    lat,
-    lon
-  );
+  const {
+    error,
+    isError,
+    isFetching,
+    isLoading,
+    currentWeather,
+    isStale,
+    refetch,
+  } = useWeather(lat, lon);
+
+  useEffect(() => {
+    // Si isStale cambia a true, actualiza el componente
+    if (isStale) {
+      // Puedes realizar acciones adicionales aquí si es necesario
+      // Por ejemplo, volver a cargar los datos
+      refetch();
+    }
+  }, [isStale, refetch]);
 
   if (isLoading) {
     return <p>Cargando datos del tiempo ...</p>;
@@ -29,6 +45,18 @@ const CurrentWeather = ({ lat, lon }) => {
     return <p>No hay datos disponibles.</p>;
   }
 
+  const getDateTime = () => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  };
+
   return (
     <>
       <h1>Tiempo actual en {currentWeather.name} </h1>
@@ -40,7 +68,7 @@ const CurrentWeather = ({ lat, lon }) => {
         color="fuchsia"
       >
         <Card>
-          <div>
+          <>
             <strong>{currentWeather.name} </strong>
             <br></br>
             <p style={{ fontSize: 32 }}> {currentWeather.main.temp} ºC </p>
@@ -48,10 +76,12 @@ const CurrentWeather = ({ lat, lon }) => {
             <h5> {currentWeather.main.temp_max} ºC Max</h5>
             <br></br>
             <p>
-              {" "}
-              <i>{currentWeather.weather[0].description}</i>{" "}
+              <i>{currentWeather.weather[0].description}</i>
             </p>
-          </div>
+            <p>
+              <i>{getDateTime()}</i>
+            </p>
+          </>
         </Card>
         <div>
           <img
@@ -84,29 +114,7 @@ const CurrentWeather = ({ lat, lon }) => {
 export default CurrentWeather;
 
 /*
-
-     <Grid numItemsMd={2} numItemsLg={3} className="gap-6 mt-6">
-        <Card>{currentWeather.wind.speed} kmph</Card>
-        <Card>
-          <h2>{currentWeather.main.pressure} mb</h2>
-        </Card>
-        <Card>
-          <h2>{currentWeather.main.humidity} %</h2>
-        </Card>
-      </Grid>
-
-      <h2>{currentWeather.name} </h2>
-      <h2>{currentWeather.wind.speed} </h2>
-      <h2>{currentWeather.wind.deg} </h2>
-      <h2>{currentWeather.main.feels_like} </h2>
-      <h2>{currentWeather.main.pressure} </h2>
-
-      <h2>{currentWeather.main.humidity} </h2>
-
-      <h2>{currentWeather.main.temp} </h2>
-
-
-      {
+    {
     "coord": {
         "lon": 2.0167,
         "lat": 41.3

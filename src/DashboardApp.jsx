@@ -6,8 +6,6 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 const queryClient = new QueryClient();
 
 export const DashboardApp = () => {
-  //return <AppRouter />;
-
   return (
     <QueryClientProvider client={queryClient}>
       <AppRouter />
