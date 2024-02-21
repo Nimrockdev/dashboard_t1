@@ -17,7 +17,8 @@ import SolarPlantMonitor from "./solarTest/SolarPlantMonitor";
 
 //Kendo
 import KendoDash from "./kendo/Kendo";
-
+import AppKendo from "./kendo/KendoGrid01";
+import AppKendoExcel from "./kendo/KendoGrid02";
 //Custom
 import WD from "./custom/WindMill";
 import WD2 from "./custom/WindMill2";
@@ -52,6 +53,7 @@ export const App = ({ drawerWidth = 240 }) => {
           <Tab>MUI 1</Tab>
           <Tab>SolarTest</Tab>
           <Tab>Kendo</Tab>
+          <Tab>Kendo GRID</Tab>
           <Tab>Wind</Tab>
           <Tab>Weather</Tab>
         </TabList>
@@ -129,6 +131,16 @@ export const App = ({ drawerWidth = 240 }) => {
             <div className="mt-6">
               <KendoDash />
             </div>
+          </TabPanel>
+          <TabPanel>
+            <Grid numItems={1} numItemsSm={1} numItemsLg={1} className="gap-2">
+              <Card>
+                <AppKendoExcel />
+              </Card>
+              <Card>
+                <AppKendo />
+              </Card>
+            </Grid>
           </TabPanel>
           <TabPanel>
             <div className="mt-6">

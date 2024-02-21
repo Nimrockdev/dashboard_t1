@@ -806,6 +806,13 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
+"@progress/jszip-esm@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@progress/jszip-esm/-/jszip-esm-1.0.3.tgz#778e2845206e2370eb72ca8d5f32041ee0d9dbbb"
+  integrity sha512-qu5qeIlUsJX0Z2oi3Aax3gvfjKrrtVzQ2LIEhmw2CVWffZ0JvtifiomyJOc0ZFk7oEyEyrVvab97bqKkNCKvfQ==
+  dependencies:
+    "@progress/pako-esm" "^1.0.1"
+
 "@progress/kendo-charts@^1.32.0":
   version "1.32.0"
   resolved "https://registry.yarnpkg.com/@progress/kendo-charts/-/kendo-charts-1.32.0.tgz#5ffd877a39ed9ed6dad6315c03b4785b2b518c6d"
@@ -839,6 +846,11 @@
   dependencies:
     "@progress/pako-esm" "^1.0.1"
 
+"@progress/kendo-file-saver@^1.0.0", "@progress/kendo-file-saver@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-file-saver/-/kendo-file-saver-1.1.1.tgz#4225affb7064fe9e12d3a89f36e00ab6c92deef0"
+  integrity sha512-mo0Cw3MLoLcx2bA+Ma/VAxkM9vHSJ4Sg0vgh6U1ZIvPXmnfO8Dgsdiv/475lafyju0kG8KOhl3bcVagCF71glQ==
+
 "@progress/kendo-inputs-common@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@progress/kendo-inputs-common/-/kendo-inputs-common-3.1.0.tgz#faf58438a01cf731c4a0d2cea7c31ab59a8c4b1c"
@@ -857,6 +869,14 @@
   integrity sha512-BcIT0Sg2s0dr6biTTXKFQzb1RYASncW+rbR0hyPokVky33jtii96tq1kjyvZ4XJPEhxhCUiBqoL5ZC+TnPnyTA==
   dependencies:
     jsonwebtoken "^9.0.2"
+
+"@progress/kendo-ooxml@^1.6.3":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-ooxml/-/kendo-ooxml-1.9.0.tgz#ffb0ffb9056660867d52f1597a3ba789af1089ab"
+  integrity sha512-XkW23MU1snvNvn/hKFvRsrzrxJuRGeexbeXupouclqHJv8prhkFfAo8xlU7b+4bw362oI3eRXklvAPWdMYnA4w==
+  dependencies:
+    "@progress/jszip-esm" "^1.0.3"
+    "@progress/pako-esm" "^1.0.1"
 
 "@progress/kendo-popup-common@1.9.2":
   version "1.9.2"
@@ -940,6 +960,15 @@
     "@progress/kendo-react-popup" "6.0.2"
     prop-types "^15.6.0"
 
+"@progress/kendo-react-excel-export@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-react-excel-export/-/kendo-react-excel-export-7.2.0.tgz#204228f9d8d7d856c4379cd520331dcfb21c8868"
+  integrity sha512-ZtUpWE5IT8GRx4uuHAE3gFxJfr58+zDXsrMyanqokPc592Mcjm/FH4lCTc2j/Lox3CHLmd80ITijnNbfYsJGQw==
+  dependencies:
+    "@progress/kendo-file-saver" "^1.0.0"
+    "@progress/kendo-ooxml" "^1.6.3"
+    prop-types "^15.6.0"
+
 "@progress/kendo-react-grid@^6.0.2":
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/@progress/kendo-react-grid/-/kendo-react-grid-6.0.2.tgz#9816e25cab75bdeda90d114023f4432acab72c23"
@@ -985,6 +1014,13 @@
     "@progress/kendo-react-animation" "6.0.2"
     "@progress/kendo-react-common" "6.0.2"
     "@progress/kendo-react-popup" "6.0.2"
+    prop-types "^15.6.0"
+
+"@progress/kendo-react-pdf@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@progress/kendo-react-pdf/-/kendo-react-pdf-7.2.0.tgz#e7fe18bbb58bda7394092ef13795401103fb1d1d"
+  integrity sha512-lidhUr0BCovqhTqv1sR1y3Wbl8KStsaHGpvAYZhXBtjeL+GdWbo8BPcBNlxng9wpfnrdWMfT9OAm+T27hZ2v7g==
+  dependencies:
     prop-types "^15.6.0"
 
 "@progress/kendo-react-popup@6.0.2", "@progress/kendo-react-popup@^6.0.2":
