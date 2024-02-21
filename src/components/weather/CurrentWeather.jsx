@@ -98,12 +98,21 @@ const CurrentWeather = ({ lat, lon }) => {
       </Grid>
       <Grid numItemsMd={2} numItemsLg={3} className="gap-6 mt-6">
         <Card style={{ textAlign: "center" }}>
-          {currentWeather.wind.speed} kmph
+          <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+            Humedad
+          </p>
+          <h2>{currentWeather.wind.speed} kmph</h2>
         </Card>
         <Card style={{ textAlign: "center" }}>
+          <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+            Presión atmosférica
+          </p>
           <h2>{currentWeather.main.pressure} mb</h2>
         </Card>
         <Card style={{ textAlign: "center" }}>
+          <p className="text-tremor-default text-tremor-content dark:text-dark-tremor-content">
+            Humedad
+          </p>
           <h2>{currentWeather.main.humidity} %</h2>
         </Card>
       </Grid>
