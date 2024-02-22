@@ -11,8 +11,10 @@ import {
   Title,
   Badge,
 } from "@tremor/react";
-
+import Button from "@mui/material/Button";
 import ReactHTMLTableToExcel from "react-html-table-to-excel";
+import * as XLSX from "xlsx";
+import { saveAs } from "file-saver";
 
 const data = [
   {
@@ -98,18 +100,35 @@ const data = [
   },
 ];
 
+function exportToExcel(data) {
+  const ws = XLSX.utils.json_to_sheet(data);
+  const wb = { Sheets: { data: ws }, SheetNames: ["data"] };
+  const excelBuffer = XLSX.write(wb, { bookType: "xlsx", type: "array" });
+  const blob = new Blob([excelBuffer], {
+    type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  });
+  saveAs(blob, "table.xlsx");
+}
+
 function TableApp() {
   return (
     <Card>
       <Title>List of Swiss Federal Councillours</Title>
-      <ReactHTMLTableToExcel
-        id="test-table-xls-button"
-        className="download-table-xls-button"
-        table="table-to-xls"
-        filename="tablexls"
-        sheet="tablexls"
-        buttonText="Export to Excel"
-      />
+      <div className="controls">
+        <ReactHTMLTableToExcel
+          id="test-table-xls-button"
+          className="btn btn-info"
+          table="table-to-xls"
+          filename="tablexls"
+          sheet="tablexls"
+          buttonText="Export to Excel (xls)"
+        />
+
+        <Button variant="contained" onClick={() => exportToExcel(data)}>
+          Export to Excel (xlsx)
+        </Button>
+      </div>
+
       <Table className="mt-5" id="table-to-xls">
         <TableHead colors="tremor-content-orange">
           <TableRow>
