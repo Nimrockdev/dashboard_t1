@@ -12,6 +12,8 @@ import {
   Badge,
 } from "@tremor/react";
 
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
+
 const data = [
   {
     name: "Viola Amherd",
@@ -100,8 +102,16 @@ function TableApp() {
   return (
     <Card>
       <Title>List of Swiss Federal Councillours</Title>
-      <Table className="mt-5">
-        <TableHead>
+      <ReactHTMLTableToExcel
+        id="test-table-xls-button"
+        className="download-table-xls-button"
+        table="table-to-xls"
+        filename="tablexls"
+        sheet="tablexls"
+        buttonText="Export to Excel"
+      />
+      <Table className="mt-5" id="table-to-xls">
+        <TableHead colors="tremor-content-orange">
           <TableRow>
             <TableHeaderCell>Name</TableHeaderCell>
             <TableHeaderCell>Position</TableHeaderCell>
