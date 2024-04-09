@@ -19,6 +19,12 @@ import SolarPlantMonitor from "./solarTest/SolarPlantMonitor";
 import KendoDash from "./kendo/Kendo";
 import AppKendo from "./kendo/KendoGrid01";
 import AppKendoExcel from "./kendo/KendoGrid02";
+import ChartContainer from "./kendo/ChartLabel";
+import ChartLabel from "./kendo/ChartLegend";
+import ChartSelection from "./kendo/ChartSelection";
+import ChartExportIMG01 from "./kendo/ChartExportIMG01";
+import ChartPanningAndZooming from "./kendo/ChartPanningAndZooming";
+
 //Custom
 import WD from "./custom/WindMill";
 import WD2 from "./custom/WindMill2";
@@ -52,8 +58,9 @@ export const App = ({ drawerWidth = 240 }) => {
           <Tab>Tremor 3</Tab>
           <Tab>MUI 1</Tab>
           <Tab>SolarTest</Tab>
-          <Tab>Kendo</Tab>
+          <Tab>Kendo Layout</Tab>
           <Tab>Kendo GRID</Tab>
+          <Tab>Kendo </Tab>
           <Tab>Wind</Tab>
           <Tab>Weather</Tab>
         </TabList>
@@ -140,6 +147,28 @@ export const App = ({ drawerWidth = 240 }) => {
               <Card>
                 <AppKendo />
               </Card>
+            </Grid>
+          </TabPanel>
+          <TabPanel>
+            <Grid numItems={1} numItemsSm={1} numItemsLg={1} className="gap-1">
+              <Card>
+                <ChartContainer />
+              </Card>
+              <Card>
+                <ChartLabel />
+              </Card>
+              <Card>
+                <ChartSelection />
+              </Card>
+
+              <Card>
+                <ChartExportIMG01 />
+              </Card>
+
+              <Card>
+                <ChartPanningAndZooming />
+              </Card>
+              <ChartContainer />
             </Grid>
           </TabPanel>
           <TabPanel>
